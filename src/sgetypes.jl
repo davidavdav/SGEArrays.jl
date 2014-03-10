@@ -9,7 +9,7 @@ type SGEArray
     step::Int
     array::Array
     function SGEArray(a::Array)
-        if !issge()
+        if !issgearray()
             a
         else
             start = int(ENV["SGE_TASK_ID"])
