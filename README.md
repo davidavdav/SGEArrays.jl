@@ -14,9 +14,8 @@ using SGEArrays
 listfile = ARGS[1]
 files = readdlm(listfile)
 
-for i in SGEArray(1:size(files))
-  file = files[i]
-  ## process file numbered i
+for file in SGEArray(files)
+  ## process file $file 
 end
 ```
 
