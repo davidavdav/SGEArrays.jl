@@ -9,5 +9,5 @@ before_install:
   - sudo apt-get update -qq -y
   - sudo apt-get install libpcre3-dev julia -y
 script:
-  - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("SGEArray"))`); Pkg.pin("SGEArray"); Pkg.resolve()'
-  - julia -e 'using SGEArray; @assert isdefined(:SGEArray); @assert typeof(SGEArray) === Module'
+  - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("SGEArrays"))`); Pkg.pin("SGEArrays"); Pkg.resolve()'
+  - julia -e 'using SGEArrays; @assert isdefined(:SGEArrays); @assert typeof(SGEArrays) === Module'
