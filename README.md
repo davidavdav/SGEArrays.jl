@@ -24,7 +24,7 @@ bash call, submit an SGE array job as an array of size 80
 
 ```bash
 find data/input/ -type f > filelist
-qsub -t1:80 -b y -cwd bin/julia-script filelist
+qsub -t 1-80 -b y -cwd bin/julia-script filelist
 ```
 
 The first job in the array processes files[1], files[81], etc, the second job processes files[2], files[82], etc.  
